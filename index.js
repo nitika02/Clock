@@ -1,0 +1,21 @@
+let a;
+let date;
+let time;
+let month;
+let year;
+let day;
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+setInterval(() => {
+    a = new Date();
+    time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+    document.getElementById("nitika").innerHTML = time;
+    date = a.getDate();
+    document.getElementById("abc").innerHTML = date;
+    month = months[a.getMonth()];
+    document.getElementById("current").innerHTML = month;
+    year = a.getFullYear();
+    document.getElementById("full-year").innerHTML = year;
+    day = days[a.getDay()];
+    document.getElementById("day").innerHTML = day;
+}, 1000);
